@@ -6,3 +6,10 @@ This is a node.js based graphics engine for video livestreams, intended for use 
 The application consists of a dashboard where particular graphics can be customised and triggered, plus a rendered output document of fixed size (1920x1080px).
 
 The output document can be integrated into popular webcast encoders like Wirecast and Open Broadcast Software.
+
+Available graphics bundles will include:
+
+* Tickers
+* Scoreboards
+* Scene transition graphics
+* Bugs with rotating logos and clocks
