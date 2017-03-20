@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Brooker CG Controller</title>
+  <link href="css/admin.css" rel="stylesheet" type="text/css"/>
+  <link href="node_modules/bootstrap/dist/css/bootstrap.css" rel="stylesheet" type="text/css"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+<article class="container">
+
+  <header class="page-header">
+    <h1>Brooker CG</h1>
+    <h2>Graphics control panel</h2>
+    <p>To see the current live state, go to /output. Documentation for this application is <a href="https://github.com/jhackett1/brooker-cg">available here</a>.</p>
+  </header>
+
+  <div class="alert alert-success" role="alert" id="connected">
+    <button type="button" class="close" data-dismiss="alert" id="close-connected">&times;</button>
+    <strong>Connected!</strong> The connection to the Brooker CG server has been established.
+  </div>
+
+  <div class="alert alert-danger" role="alert" id="disconnected">
+    <strong>Disconnected</strong> The connection to the Brooker CG server has been lost. Try refreshing this page or restarting the server application.
+  </div>
+
+  <!-- Controls start here -->
+
+  <div class="row">
+    <!-- Left hand column of controls -->
+    <div class="col-md-6">
+
+      <!-- Controls for the bug -->
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title">Bug</h3>
+        </div>
+        <div class="panel-body">
+          <form>
+            <div class="form-group">
+              <label for="bug-visible">Visible?</label>
+              <input id="bug-visible" type="checkbox"></input><br>
+            </div>
+            <div class="form-group">
+              <label for="bug-message">Message</label>
+              <input id="bug-message" class="form-control" placeholder="LIVE" type="text"></input><br>
+            </div>
+            <div class="form-group">
+              <input type="submit" class="btn btn-danger" value="Send"></input>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title">Ticker</h3>
+        </div>
+        <div class="panel-body">
+          <form>
+            <div class="form-group">
+              <label for="bug-visible">Visible?</label>
+              <input id="bug-visible" type="checkbox"></input><br>
+            </div>
+            <div class="form-group">
+              <label for="bug-message">Headline</label>
+              <input id="bug-message" class="form-control" type="text"></input><br>
+            </div>
+            <div class="form-group">
+              <label for="bug-message">Trails</label><br>
+              <textarea id="bug-message" class="form-control"></textarea><br>
+              <span id="helpBlock" class="help-block">Seperate each trail with commas.</span>
+            </div>
+            <div class="form-group">
+              <input type="submit" class="btn btn-danger" value="Send"></input>
+            </div>
+          </form>
+        </div>
+      </div>
+
+
+
+    </div>
+    <!-- Right-hand column of controls -->
+    <div class="col-md-6">
+
+
+
+        <iframe height="400px" width="100%" src="../brooker-cg/output.html"></iframe>
+        <p>Representation of current live output.</p>
+
+
+
+    </div>
+  </div>
+
+</article>
+<script src="admin.js"></script>
+</body>
+</html>
