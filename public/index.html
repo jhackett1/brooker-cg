@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Brooker CG Controller</title>
+  <link href="/css/admin.css" rel="stylesheet" type="text/css"/>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="/img/swirl.png" />
+</head>
+<body>
+
+<article class="container">
+
+  <header class="page-header">
+    <h1>Brooker CG</h1>
+    <h2>Graphics control panel</h2>
+    <p>To use, add <a href="/output.html">/output</a> as a layer in your video encoder. Documentation for this application is <a href="https://github.com/jhackett1/brooker-cg">available here</a>.</p>
+  </header>
+
+  <div class="alert alert-success" role="alert" id="connected">
+    <button type="button" class="close" data-dismiss="alert" id="close-connected">&times;</button>
+    <strong>Connected!</strong> The connection to the Brooker CG server has been established.
+  </div>
+
+  <div class="alert alert-danger" role="alert" id="disconnected">
+    <strong>Disconnected</strong> The connection to the Brooker CG server has been lost. Try refreshing this page or restarting the server application.
+  </div>
+
+  <!-- Controls start here -->
+
+  <div class="row">
+    <!-- Left hand column of controls -->
+    <div class="col-md-6">
+
+      <!-- Controls for the bug -->
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title">Bug</h3>
+        </div>
+        <div class="panel-body">
+          <form>
+            <div class="form-group">
+              <label for="bug-visible">Visible?</label>
+              <input id="bug-visible" type="checkbox"></input><br>
+            </div>
+            <div class="form-group">
+              <label for="bug-message">Message</label>
+              <input id="bug-message" class="form-control" type="text"></input><br>
+            </div>
+        </div>
+      </div>
+
+
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title">Lower third</h3>
+        </div>
+        <div class="panel-body">
+            <div class="form-group">
+              <label for="lower-third-visible">Visible?</label>
+              <input id="lower-third-visible" type="checkbox"></input><br>
+            </div>
+            <div class="form-group">
+              <label for="headline">Headline</label>
+              <input id="headline" class="form-control" type="text"></input><br>
+            </div>
+            <div class="form-group">
+              <label for="subheadline">Subheadline</label>
+              <input id="subheadline" class="form-control" type="text"></input><br>
+            </div>
+        </div>
+      </div>
+
+    </div>
+    <!-- Right-hand column of controls -->
+    <div class="col-md-6">
+
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title">Holding card</h3>
+        </div>
+        <div class="panel-body">
+            <div class="form-group">
+              <label for="holding-visible">Visible?</label>
+              <input id="holding-visible" type="checkbox"></input><br>
+            </div>
+            <div class="form-group">
+              <label for="holding-message">Message</label>
+              <input id="holding-message" class="form-control" type="text"></input><br>
+            </div>
+            <div class="form-group">
+              <label for="holding-submessage">Sub Message</label>
+              <input id="holding-submessage" class="form-control" type="text"></input><br>
+            </div>
+        </div>
+      </div>
+
+
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title">Ticker & time</h3>
+        </div>
+        <div class="panel-body">
+            <div class="form-group">
+              <label for="ticker-visible">Visible?</label>
+              <input id="ticker-visible" type="checkbox"></input><br>
+            </div>
+            <div class="form-group">
+              <label for="ticker-trails">Trails</label><br>
+              <textarea id="ticker-trails" class="form-control"></textarea><br>
+              <span id="helpBlock" class="help-block">Seperate each trail with commas.</span>
+            </div>
+            <div class="form-group">
+              <input type="submit" class="btn btn-danger" value="GO"></input>
+            </div>
+          </form>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</article>
+
+<footer class="footer">
+      <div class="container">
+        <p class="text-muted">Developed by <a href="http://joshuahackett.com">Joshua Hackett</a> for Smoke Media.</p>
+      </div>
+    </footer>
+
+<script src="/js/socket.io-client.min.js"></script>
+<script src="/js/admin.js"></script>
+</body>
+</html>

@@ -1,0 +1,241 @@
+html
+  overflow: hidden
+
+body
+  width: 1920px
+  height: 1080px
+  position: relative
+  margin: 0
+  padding: 0
+  overflow: hidden
+  background-image: url("/img/bg.png")
+
+section
+  opacity: 0
+  transition: 0.4s
+
+section.visible
+  opacity: 1
+
+.hidden
+  opacity: 0
+  transition: 0.5s
+
+section#holding
+  position: absolute
+  width: 1920px
+  height: 1080px
+  // background-color: #9c1f31
+
+  background-image: url("/img/test-card.jpg")
+  //
+  // background: rgb(156,31,49)
+  // background: -moz-linear-gradient(-45deg, rgba(156,31,49,1) 0%, rgba(122,24,26,1) 100%)
+  // background: -webkit-linear-gradient(-45deg, rgba(156,31,49,1) 0%,rgba(122,24,26,1) 100%)
+  // background: linear-gradient(135deg, rgba(156,31,49,1) 0%,rgba(122,24,26,1) 100%)
+
+
+  left: 0px
+  right: 0px
+  bottom: 0px
+  top: 0px
+  display: flex
+  flex-direction: column
+  overflow: hidden
+  align-items: center
+  justify-content: center
+  transition: 2s !important
+  z-index: 99
+
+  h1
+    text-align: center
+    color: #fafafa
+    font-size: 500%
+    font-family: helvetica
+    margin: 50px 0px 0px 0px
+    transition: 0.5s
+    font-weight: 400
+
+  h2
+    text-align: center
+    color: #fafafa
+    font-size: 300%
+    font-family: helvetica
+    font-weight: 100
+    margin: 10px
+    font-style: italic
+    transition: 0.5s
+
+  img
+    width: 350px
+    height: auto
+    filter: brightness(100)
+
+section#ticker.visible
+  margin-bottom: 0px
+
+section#ticker
+  position: absolute
+  width: 1920px
+  height: 60px
+  background-color: #9c1f31
+  left: 0px
+  right: 0px
+  bottom: 80px
+  overflow: hidden
+  margin-bottom: -100px
+
+  @keyframes marquee
+    0%
+      transform: translateX(1920px)
+    100%
+      transform: translateX(-100%)
+
+  div#trails
+    position: absolute
+    overflow: hidden
+    margin: 0
+    left: 200px
+    right: 0px
+    z-index: 2
+    height: 60px
+    transition: 0.5s
+
+    ul
+      font-size: 30px
+      color: #fafafa
+      height: 60px
+      padding: 12px 0px
+      font-family: helvetica
+      margin: 0
+      white-space: nowrap
+      animation: marquee 60s linear infinite
+      position: absolute
+      left: 0
+      top: 0
+
+      li:last-of-type
+        margin-right: 0
+
+      li:last-of-type::after
+        content: none
+        margin-left: 0
+
+      li::after
+        content: "•"
+        margin-left: 80px
+
+      li
+        display: inline
+        padding: 0
+        margin-right: 80px
+        text-transform: uppercase
+
+  span#time
+    color: #fafafa
+    font-family: helvetica
+    text-align: center
+    font-size: 30px
+    height: 60px
+    position: absolute
+    left: 200px
+    display: inline-block
+    padding: 13px
+    box-sizing: border-box
+    background: #681121
+    z-index: 3
+
+section#lower-third.visible
+  margin-bottom: 0px
+
+section#lower-third
+  width: 1920px
+  height: 130px
+  background: rgba(255,255,255,0.8)
+  left: 0px
+  right: 0px
+  bottom: 140px
+  position: absolute
+  padding: 10px 0px
+  margin-bottom: -50px
+  z-index: -1
+
+  span#headline
+    font-family: helvetica
+    font-weight: 700
+    font-size: 60px
+    margin-left: 200px
+    margin-top: 5px
+    color: #2d2d2d
+    display: block
+    transition: 0.5s
+
+  span#subheadline
+    font-family: helvetica
+    font-weight: 400
+    font-size: 30px
+    margin-top: 10px
+    margin-left: 200px
+    color: #2d2d2d
+    display: block
+    transition: 0.5s
+
+// The top-right bug
+section#bug.visible
+  margin-right: 0px
+
+section#bug
+  margin-right: -300px
+  position: absolute
+  top: 80px
+  right: 0px
+  height: 60px
+  width: 300px
+  font-family: helvetica
+  padding: 15px
+  box-sizing: border-box
+  color: #2d2d2d
+  transition: 0.4s
+  background: rgba(255,255,255,0.8)
+  font-weight: 400
+  font-size: 30px
+
+  span#venue
+    transition: 0.5s
+
+  span#live
+    color: #fafafa
+    background-color: #9c1f31
+    position: absolute
+    top: 0px
+    right: 300px
+    height: 60px
+    box-sizing: border-box
+    padding: 15px
+    text-transform: uppercase
+
+  // The spinning swirl logo
+  img
+    position: absolute
+    right: 410px
+    top: 0px
+    height: 60px
+    width: 60px
+    animation-name: rotate
+    animation-duration: 15s
+    animation-iteration-count: infinite
+
+  // Over the course of the animation, rotate all the way round
+  @keyframes rotate
+    0%
+      -webkit-transform: rotate3d(0,1,0,0deg)
+      -o-transform: rotate3d(0,1,0,0deg)
+      -moz-transform: rotate3d(0,1,0,0deg)
+      -ms-transform: rotate3d(0,1,0,0deg)
+      transform: rotate3d(0,1,0,0deg)
+    100%
+      -webkit-transform: rotate3d(0,1,0,360deg)
+      -o-transform: rotate3d(0,1,0,360deg)
+      -moz-transform: rotate3d(0,1,0,360deg)
+      -ms-transform: rotate3d(0,1,0,360deg)
+      transform: rotate3d(0,1,0,360deg)

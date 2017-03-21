@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,yCAAyC;EACvC,OAAO,EAAE,KAAK;;AAEhB,yBAAyB;EACvB,OAAO,EAAE,IAAI;;AAEf,MAAM;EACJ,KAAK,EAAE,IAAI;EACX,MAAM,EAAE,IAAI;EACZ,YAAY,EAAE,IAAI",
+"sources": ["admin.sass"],
+"names": [],
+"file": "admin.css"
+}

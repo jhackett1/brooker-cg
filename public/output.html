@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Brooker CG OUTPUT</title>
+  <link href="css/output.css" rel="stylesheet" type="text/css"/>
+  <link href="css/animate.css" rel="stylesheet" type="text/css"/>
+  <link href="https://fonts.googleapis.com/css?family=Droid+Sans:400,700" rel="stylesheet">
+</head>
+<body>
+
+  <section id="holding">
+    <img src="/img/TV.png"/>
+    <h1 id="holding-message"></h1>
+    <h2 id="holding-submessage"></h2>
+  </section>
+
+  <!-- Top left bug -->
+  <section id="bug" class="animated">
+    <img src="/img/swirl.png"/>
+    <span id="live">Live</span>
+    <span id="venue"></span>
+  </section>
+
+  <!-- Lower red ticker -->
+  <section id="ticker">
+    <span id="time"></span>
+    <div id="trails">
+      <ul>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Headline LT -->
+  <section id="lower-third">
+    <span id="headline"></span>
+    <span id="subheadline"></span>
+  </section>
+
+<script src="/js/socket.io-client.min.js"></script>
+<script src="/js/output.js"></script>
+</body>
+</html>

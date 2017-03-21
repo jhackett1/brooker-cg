@@ -1,31 +1,31 @@
 {
   "name": "brooker-cg",
   "version": "1.0.0",
-  "description": "A character generation tool for Smoke TV live broadcasts",
-  "main": "app.js",
+  "description": "Live graphics framework for Smoke TV",
+  "main": "server.js",
   "dependencies": {
     "bootstrap": "^3.3.7",
+    "express": "^4.15.2",
+    "http": "^0.0.0",
+    "socket.io": "^1.7.3",
     "ws": "^2.2.1"
   },
   "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/jhackett1/brooker-cg.git"
   },
   "keywords": [
-    "cg",
-    "live",
-    "broadcast",
     "tv",
-    "video",
-    "youtube",
-    "graphics"
+    "graphics",
+    "node"
   ],
-  "author": "Joshua Hackett",
-  "license": "MIT",
+  "author": "",
+  "license": "ISC",
   "bugs": {
     "url": "https://github.com/jhackett1/brooker-cg/issues"
   },

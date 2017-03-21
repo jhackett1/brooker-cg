@@ -13,3 +13,5 @@ Available graphics bundles will include:
 * Scoreboards
 * Scene transition graphics
 * Bugs with rotating logos and clocks
+
+To run, install node.js, run "npm install" then run "node server" from the project directory. The admin panel will be accessible from localhost:3000.
