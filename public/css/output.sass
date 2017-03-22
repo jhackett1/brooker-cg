@@ -57,12 +57,10 @@ section#holding
   width: 1920px
   height: 1080px
   // background-color: #9c1f31
-  background-image: url("/img/test-card.jpg")
-  //
-  // background: rgb(156,31,49)
-  // background: -moz-linear-gradient(-45deg, rgba(156,31,49,1) 0%, rgba(122,24,26,1) 100%)
-  // background: -webkit-linear-gradient(-45deg, rgba(156,31,49,1) 0%,rgba(122,24,26,1) 100%)
-  // background: linear-gradient(135deg, rgba(156,31,49,1) 0%,rgba(122,24,26,1) 100%)
+  background: rgb(156,31,49)
+  background: -moz-linear-gradient(-45deg, rgba(156,31,49,1) 0%, rgba(122,24,26,1) 100%)
+  background: -webkit-linear-gradient(-45deg, rgba(156,31,49,1) 0%,rgba(122,24,26,1) 100%)
+  background: linear-gradient(135deg, rgba(156,31,49,1) 0%,rgba(122,24,26,1) 100%)
   left: 0px
   right: 0px
   bottom: 0px
@@ -72,24 +70,31 @@ section#holding
   overflow: hidden
   align-items: center
   justify-content: center
-  transition: 2s !important
+  transition: 1s !important
   z-index: 99
+  background: rgb(122,24,34)
+  background: -moz-linear-gradient(-45deg, rgba(122,24,34,1) 0%, rgba(156,31,49,1) 50%, rgba(218,83,103,1) 100%)
+  background: -webkit-linear-gradient(-45deg, rgba(122,24,34,1) 0%,rgba(156,31,49,1) 50%,rgba(218,83,103,1) 100%)
+  background: linear-gradient(135deg, rgba(122,24,34,1) 0%,rgba(156,31,49,1) 50%,rgba(218,83,103,1) 100%)
 
   h1
     text-align: center
     color: #fafafa
-    font-size: 500%
-    font-family: helvetica
-    margin: 50px 0px 0px 0px
+    font-size: 600%
+    font-family: league gothic
+    margin: 90px 0px 20px 0px
     transition: 0.5s
+    letter-spacing: 5px
+    text-transform: uppercase
     font-weight: 400
 
   h2
     text-align: center
-    color: #fafafa
+    color: #dfdfdf
     font-size: 300%
-    font-family: helvetica
-    font-weight: 100
+    font-family: league gothic
+    font-weight: normal
+    letter-spacing: 1px
     margin: 10px
     font-style: italic
     transition: 0.5s
@@ -97,7 +102,7 @@ section#holding
   img
     width: 350px
     height: auto
-    filter: brightness(100)
+    filter: brightness(100) drop-shadow(7px 7px 2px rgba(0,0,0,0.2))
 
 section#ticker.visible
   margin-bottom: 0px
@@ -253,17 +258,17 @@ section#bug
     animation-duration: 15s
     animation-iteration-count: infinite
 
-  // Over the course of the animation, rotate all the way round
-  @keyframes rotate
-    0%
-      -webkit-transform: rotate3d(0,1,0,0deg)
-      -o-transform: rotate3d(0,1,0,0deg)
-      -moz-transform: rotate3d(0,1,0,0deg)
-      -ms-transform: rotate3d(0,1,0,0deg)
-      transform: rotate3d(0,1,0,0deg)
-    100%
-      -webkit-transform: rotate3d(0,1,0,360deg)
-      -o-transform: rotate3d(0,1,0,360deg)
-      -moz-transform: rotate3d(0,1,0,360deg)
-      -ms-transform: rotate3d(0,1,0,360deg)
-      transform: rotate3d(0,1,0,360deg)
+// Over the course of the animation, rotate all the way round
+@keyframes rotate
+  0%
+    -webkit-transform: rotate3d(0,1,0,0deg)
+    -o-transform: rotate3d(0,1,0,0deg)
+    -moz-transform: rotate3d(0,1,0,0deg)
+    -ms-transform: rotate3d(0,1,0,0deg)
+    transform: rotate3d(0,1,0,0deg)
+  100%
+    -webkit-transform: rotate3d(0,1,0,360deg)
+    -o-transform: rotate3d(0,1,0,360deg)
+    -moz-transform: rotate3d(0,1,0,360deg)
+    -ms-transform: rotate3d(0,1,0,360deg)
+    transform: rotate3d(0,1,0,360deg)
