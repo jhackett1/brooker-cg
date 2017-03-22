@@ -21,6 +21,36 @@ section.visible {
   opacity: 0;
   transition: 0.5s; }
 
+section#scoreboard.visible {
+  margin-left: 0px; }
+
+section#scoreboard {
+  position: absolute;
+  margin-left: -300px;
+  top: 80px;
+  left: 200px;
+  height: 60px;
+  font-family: helvetica;
+  box-sizing: border-box;
+  color: #2d2d2d;
+  transition: 0.4s;
+  background: rgba(255, 255, 255, 0.8);
+  font-weight: 400;
+  font-size: 30px;
+  box-sizing: border-box;
+  overflow: hidden;
+  padding-right: 10px; }
+  section#scoreboard span#team1, section#scoreboard span#team2 {
+    padding: 11px;
+    display: inline-block; }
+  section#scoreboard span#score1, section#scoreboard span#score2 {
+    color: #fafafa;
+    padding: 15px;
+    display: inline-block;
+    background: -moz-linear-gradient(-45deg, #a01f31 0%, #7a181a 100%);
+    background: -webkit-linear-gradient(-45deg, #a01f31 0%, #7a181a 100%);
+    background: linear-gradient(135deg, #a01f31 0%, #7a181a 100%); }
+
 section#holding {
   position: absolute;
   width: 1920px;

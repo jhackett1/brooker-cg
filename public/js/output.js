@@ -107,10 +107,6 @@ socket.on("instruction", function(message){
 
   var trails = document.querySelector("#trails ul");
   if (instruction.tickerTrails) {
-
-
-
-
     var newList = "";
     // For every array item, add it to the DOM as a li
     for (var I = 0; I < instruction.tickerTrails[0].length; I++)
@@ -118,29 +114,67 @@ socket.on("instruction", function(message){
        trailList = "<li>" + instruction.tickerTrails[0][I] + "</li>";
        newList += trailList;
     }
-
     if (newList !== trails.innerHTML) {
-
       trails.classList.add("hidden");
       setTimeout(function() {
         trails.innerHTML = newList;
         trails.classList.remove("hidden");
       }, 500);
+    }
 
 
+    var scoreboard = document.getElementById("scoreboard");
+    if (instruction.scoreboardVisible) {
+      scoreboard.classList.add("visible");
+    } else {
+      scoreboard.classList.remove("visible");
+    }
+
+    var team1 = document.getElementById("team1");
+    if (instruction.scoreboardTeam1 !== team1.innerHTML) {
+      team1.classList.add("hidden");
+      setTimeout(function() {
+        team1.innerHTML = instruction.scoreboardTeam1;
+        team1.classList.remove("hidden");
+      }, 500);
+    }
+
+    var team2 = document.getElementById("team2");
+    if (instruction.scoreboardTeam2 !== team2.innerHTML) {
+      team2.classList.add("hidden");
+      setTimeout(function() {
+        team2.innerHTML = instruction.scoreboardTeam2;
+        team2.classList.remove("hidden");
+      }, 500);
+    }
+
+    var score1 = document.getElementById("score1");
+    if (instruction.scoreboardScore1 !== score1.innerHTML) {
+      score1.classList.add("hidden");
+      setTimeout(function() {
+        score1.innerHTML = instruction.scoreboardScore1;
+        score1.classList.remove("hidden");
+      }, 500);
+    }
+
+    var score2 = document.getElementById("score2");
+    if (instruction.scoreboardScore2 !== score2.innerHTML) {
+      score2.classList.add("hidden");
+      setTimeout(function() {
+        score2.innerHTML = instruction.scoreboardScore2;
+        score2.classList.remove("hidden");
+      }, 500);
     }
 
 
 
 
-    // // Clear container of content
-    // trails.innerHTML = "";
-    // // For every array item, add it to the DOM as a li
-    // for (var I = 0; I < instruction.tickerTrails[0].length; I++)
-    // {
-    //    trailList = "<li>" + instruction.tickerTrails[0][I] + "</li>";
-    //    trails.innerHTML += trailList;
-    // }
+
+
+
+
+
+
 
   }
 

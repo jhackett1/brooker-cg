@@ -20,7 +20,7 @@ document.getElementById('close-connected').addEventListener('click', function(){
   connectMessage.classList.remove("visible");
 })
 
-// Get the fields and set as vars
+// Get the form fields from the document and set as vars to be parsed into json
 var bugVisibleValue = document.getElementById("bug-visible");
 var bugMessageValue = document.getElementById("bug-message");
 
@@ -32,9 +32,14 @@ var holdingVisibleValue = document.getElementById("holding-visible");
 var holdingMessageValue = document.getElementById("holding-message");
 var holdingSubMessageValue = document.getElementById("holding-submessage");
 
+var scoreboardVisibleValue = document.getElementById("scoreboard-visible");
+var scoreboardTeam1Value = document.getElementById("scoreboard-team-1");
+var scoreboardScore1Value = document.getElementById("scoreboard-score-1");
+var scoreboardTeam2Value = document.getElementById("scoreboard-team-2");
+var scoreboardScore2Value = document.getElementById("scoreboard-score-2");
+
 var tickerVisibleValue = document.getElementById("ticker-visible");
 var tickerTrails = document.getElementById("ticker-trails");
-
 
 // On submit, send a message to the server
 document.forms[0].onsubmit = function () {
@@ -53,7 +58,13 @@ document.forms[0].onsubmit = function () {
     holdingSubMessage: holdingSubMessageValue.value,
     tickerVisible: tickerVisibleValue.checked,
     // Split the comma-separated input into an array
-    tickerTrails: [tickerTrails.value.split(',')]
+    tickerTrails: [tickerTrails.value.split(',')],
+    // And the scoreboard
+    scoreboardVisible: scoreboardVisibleValue.checked,
+    scoreboardTeam1: scoreboardTeam1Value.value,
+    scoreboardScore1: scoreboardScore1Value.value,
+    scoreboardTeam2: scoreboardTeam2Value.value,
+    scoreboardScore2: scoreboardScore2Value.value
   };
 
   instruction = JSON.stringify(graphicsState);
@@ -86,5 +97,12 @@ socket.on("instruction", function(message){
 
   tickerVisibleValue.checked = currentState.tickerVisible;
   tickerTrails.value = currentState.tickerTrails;
+
+  scoreboardVisibleValue.checked = currentState.scoreboardVisible;
+  scoreboardTeam1Value.value = currentState.scoreboardTeam1;
+  scoreboardScore1Value.value = currentState.scoreboardScore1;
+  scoreboardTeam2Value.value = currentState.scoreboardTeam2;
+  scoreboardScore2Value.value = currentState.scoreboardScore2;
+
 
 })

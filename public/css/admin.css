@@ -9,4 +9,11 @@ h1 img {
   height: 35px;
   margin-right: 10px; }
 
+#scoreboard-controls .form-control {
+  width: 40%;
+  display: inline-block;
+  margin-right: 15px; }
+#scoreboard-controls .form-control[type="number"] {
+  width: 20%; }
+
 /*# sourceMappingURL=admin.css.map */
