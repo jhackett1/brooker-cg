@@ -8,8 +8,7 @@ body {
   position: relative;
   margin: 0;
   padding: 0;
-  overflow: hidden;
-  background-image: url("/img/bg.png"); }
+  overflow: hidden; }
 
 section {
   opacity: 0;
