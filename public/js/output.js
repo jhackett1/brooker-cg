@@ -105,7 +105,7 @@ socket.on("instruction", function(message){
     ticker.classList.remove("visible");
   }
 
-  var trails = document.querySelector("#trails ul");
+  var trails = document.querySelector("#trails marquee");
   if (instruction.tickerTrails) {
     var newList = "";
     // For every array item, add it to the DOM as a li
@@ -150,20 +150,12 @@ socket.on("instruction", function(message){
 
     var score1 = document.getElementById("score1");
     if (instruction.scoreboardScore1 !== score1.innerHTML) {
-      score1.classList.add("hidden");
-      setTimeout(function() {
-        score1.innerHTML = instruction.scoreboardScore1;
-        score1.classList.remove("hidden");
-      }, 500);
+      score1.innerHTML = instruction.scoreboardScore1;
     }
 
     var score2 = document.getElementById("score2");
     if (instruction.scoreboardScore2 !== score2.innerHTML) {
-      score2.classList.add("hidden");
-      setTimeout(function() {
         score2.innerHTML = instruction.scoreboardScore2;
-        score2.classList.remove("hidden");
-      }, 500);
     }
 
 

@@ -126,27 +126,28 @@ section#ticker {
     z-index: 2;
     height: 60px;
     transition: 0.5s; }
-    section#ticker div#trails ul {
+    section#ticker div#trails marquee {
       font-size: 30px;
       color: #fafafa;
       height: 60px;
-      padding: 12px 0px;
+      padding: 16px 0px;
       font-family: helvetica;
       margin: 0;
       white-space: nowrap;
-      animation: marquee 60s linear infinite;
+      marquee-speed: 60s;
       position: absolute;
       left: 0;
-      top: 0; }
-      section#ticker div#trails ul li:last-of-type {
+      top: 0;
+      display: inline-block; }
+      section#ticker div#trails marquee li:last-of-type {
         margin-right: 0; }
-      section#ticker div#trails ul li:last-of-type::after {
+      section#ticker div#trails marquee li:last-of-type::after {
         content: none;
         margin-left: 0; }
-      section#ticker div#trails ul li::after {
+      section#ticker div#trails marquee li::after {
         content: "•";
         margin-left: 80px; }
-      section#ticker div#trails ul li {
+      section#ticker div#trails marquee li {
         display: inline;
         padding: 0;
         margin-right: 80px;
@@ -184,7 +185,7 @@ section#lower-third {
     font-weight: 700;
     font-size: 60px;
     margin-left: 200px;
-    margin-top: 5px;
+    margin-top: 15px;
     color: #2d2d2d;
     display: block;
     transition: 0.5s; }
