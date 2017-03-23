@@ -39,6 +39,7 @@ section#scoreboard
   box-sizing: border-box
   overflow: hidden
   padding-right: 10px
+  border-radius: 10px
 
   span#team1, span#team2
     padding: 11px
@@ -52,13 +53,10 @@ section#scoreboard
     background: -webkit-linear-gradient(-45deg, rgba(160,31,49,1) 0%,rgba(122,24,26,1) 100%)
     background: linear-gradient(135deg, rgba(160,31,49,1) 0%,rgba(122,24,26,1) 100%)
 
-
-
 section#holding
   position: absolute
   width: 1920px
   height: 1080px
-  // background-color: #9c1f31
   background: rgb(156,31,49)
   background: -moz-linear-gradient(-45deg, rgba(156,31,49,1) 0%, rgba(122,24,26,1) 100%)
   background: -webkit-linear-gradient(-45deg, rgba(156,31,49,1) 0%,rgba(122,24,26,1) 100%)
@@ -130,7 +128,7 @@ section#ticker
     position: absolute
     overflow: hidden
     margin: 0
-    left: 200px
+    left: 205px
     right: 0px
     z-index: 2
     height: 60px
@@ -276,3 +274,77 @@ section#bug
     -moz-transform: rotate3d(0,1,0,360deg)
     -ms-transform: rotate3d(0,1,0,360deg)
     transform: rotate3d(0,1,0,360deg)
+
+
+
+
+section#slice
+  position: absolute
+  width: 1920px
+  height: 1080px
+  // background-color: #9c1f31
+  left: 0px
+  right: 0px
+  bottom: 0px
+  top: 0px
+  display: flex
+  flex-direction: column
+  overflow: hidden
+  align-items: flex-end
+  justify-content: center
+  transition: 1s !important
+  z-index: 99
+  padding: 80px 140px
+  box-sizing: border-box
+
+  div
+    width: 1000px
+    height: 2000px
+    position: absolute
+    transform: rotate(20deg)
+    background: rgb(156,31,49)
+    background: -moz-linear-gradient(-45deg, rgba(156,31,49,1) 0%, rgba(122,24,26,1) 100%)
+    background: -webkit-linear-gradient(-45deg, rgba(156,31,49,1) 0%,rgba(122,24,26,1) 100%)
+    background: linear-gradient(135deg, rgba(156,31,49,1) 0%,rgba(122,24,26,1) 100%)
+    box-shadow: 0px 0px 30px rgba(0,0,0,0.4)
+
+  div:first-of-type
+    top: -600px
+    left: -850px
+
+  div:last-of-type
+    bottom: -800px
+    right: -100px
+
+  h1
+    text-align: right
+    color: #fafafa
+    font-size: 700%
+    font-family: league gothic
+    transition: 0.5s
+    letter-spacing: 5px
+    text-transform: uppercase
+    font-weight: 400
+    z-index: 7
+    max-width: 550px
+    margin: 0px
+
+  h2
+    text-align: right
+    color: #dfdfdf
+    font-size: 300%
+    font-family: league gothic
+    font-weight: normal
+    letter-spacing: 1px
+    margin: 10px
+    max-width: 550px
+    font-style: italic
+    transition: 0.5s
+    z-index: 7
+    margin: 120px 0px 20px 0px
+
+  img
+    width: 320px
+    height: auto
+    filter: brightness(100) drop-shadow(7px 7px 2px rgba(0,0,0,0.2))
+    z-index: 7

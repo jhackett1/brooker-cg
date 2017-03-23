@@ -29,6 +29,7 @@ var headlineValue = document.getElementById("headline");
 var subHeadlineValue = document.getElementById("subheadline");
 
 var holdingVisibleValue = document.getElementById("holding-visible");
+var sliceVisibleValue = document.getElementById("slice-visible");
 var holdingMessageValue = document.getElementById("holding-message");
 var holdingSubMessageValue = document.getElementById("holding-submessage");
 
@@ -53,6 +54,7 @@ document.forms[0].onsubmit = function () {
     lowerThirdVisible: lowerThirdVisibleValue.checked,
     headline: headlineValue.value,
     subheadline: subHeadlineValue.value,
+    sliceVisible: sliceVisibleValue.checked,
     holdingVisible: holdingVisibleValue.checked,
     holdingMessage: holdingMessageValue.value,
     holdingSubMessage: holdingSubMessageValue.value,
@@ -91,6 +93,7 @@ socket.on("instruction", function(message){
   headlineValue.value = currentState.headline;
   subHeadlineValue.value = currentState.subheadline;
 
+  sliceVisibleValue.checked = currentState.sliceVisible;
   holdingVisibleValue.checked = currentState.holdingVisible;
   holdingMessageValue.value = currentState.holdingMessage;
   holdingSubMessageValue.value = currentState.holdingSubMessage;

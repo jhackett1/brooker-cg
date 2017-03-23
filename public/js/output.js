@@ -55,22 +55,40 @@ socket.on("instruction", function(message){
     holding.classList.remove("visible");
   }
 
+  var slice = document.getElementById("slice");
+  if (instruction.sliceVisible) {
+    slice.classList.add("visible");
+  } else {
+    slice.classList.remove("visible");
+  }
+
   var holdingMessage = document.getElementById("holding-message");
+  var sliceMessage = document.getElementById("slice-message");
   if (instruction.holdingMessage !== holdingMessage.innerHTML) {
+
     holdingMessage.classList.add("hidden");
+    sliceMessage.classList.add("hidden");
     setTimeout(function() {
       holdingMessage.innerHTML = instruction.holdingMessage;
+      sliceMessage.innerHTML = instruction.holdingMessage;
       holdingMessage.classList.remove("hidden");
+      sliceMessage.classList.remove("hidden");
     }, 500);
   }
 
-  var holdingSubMessage = document.getElementById("holding-submessage")
+  var holdingSubMessage = document.getElementById("holding-submessage");
+  var sliceSubMessage = document.getElementById("slice-submessage");
   if (instruction.holdingSubMessage !==  holdingSubMessage.innerHTML) {
     holdingSubMessage.classList.add("hidden");
+    sliceSubMessage.classList.add("hidden");
     setTimeout(function() {
       holdingSubMessage.innerHTML = instruction.holdingSubMessage;
+      sliceSubMessage.innerHTML = instruction.holdingSubMessage;
       holdingSubMessage.classList.remove("hidden");
+      sliceSubMessage.classList.remove("hidden");
     }, 500);
+
+
   }
 
   var lowerThird = document.getElementById("lower-third");
