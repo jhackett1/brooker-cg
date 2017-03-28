@@ -92,20 +92,17 @@ section#holding {
     text-align: center;
     color: #fafafa;
     font-size: 600%;
-    font-family: league gothic;
-    margin: 90px 0px 20px 0px;
+    font-family: Helvetica;
+    margin: 90px 0px 40px 0px;
     -webkit-transition: 0.5s;
     transition: 0.5s;
-    letter-spacing: 5px;
-    text-transform: uppercase;
     font-weight: 400; }
   section#holding h2 {
     text-align: center;
     color: #dfdfdf;
     font-size: 300%;
-    font-family: league gothic;
+    font-family: Helvetica;
     font-weight: normal;
-    letter-spacing: 1px;
     margin: 10px;
     font-style: italic;
     -webkit-transition: 0.5s;
@@ -335,12 +332,10 @@ section#slice {
   section#slice h1 {
     text-align: right;
     color: #fafafa;
-    font-size: 700%;
-    font-family: league gothic;
+    font-size: 500%;
+    font-family: Helvetica;
     -webkit-transition: 0.5s;
     transition: 0.5s;
-    letter-spacing: 5px;
-    text-transform: uppercase;
     font-weight: 400;
     z-index: 7;
     max-width: 550px;
@@ -349,16 +344,15 @@ section#slice {
     text-align: right;
     color: #dfdfdf;
     font-size: 300%;
-    font-family: league gothic;
+    font-family: Helvetica;
     font-weight: normal;
-    letter-spacing: 1px;
     margin: 10px;
     max-width: 550px;
     font-style: italic;
     -webkit-transition: 0.5s;
     transition: 0.5s;
     z-index: 7;
-    margin: 120px 0px 20px 0px; }
+    margin: 120px 0px 50px 0px; }
   section#slice img {
     width: 320px;
     height: auto;
